@@ -12,7 +12,7 @@ import { Length, MaxLength, IsDate, IsUrl } from 'class-validator';
 import { Wish } from '../../wishes/entities/wishes.entity';
 import { User } from '../../users/entities/user.entity';
 
-@Entity({ schema: 'kupipodariday' })
+@Entity()
 export class Wishlist {
   @PrimaryGeneratedColumn()
   id: number;

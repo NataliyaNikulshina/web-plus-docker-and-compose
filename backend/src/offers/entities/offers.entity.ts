@@ -10,7 +10,7 @@ import { IsDate, IsBoolean, IsNumber } from 'class-validator';
 import { User } from '../../users/entities/user.entity';
 import { Wish } from '../../wishes/entities/wishes.entity';
 
-@Entity({ schema: 'kupipodariday' })
+@Entity()
 export class Offer {
   @PrimaryGeneratedColumn()
   id: number;

@@ -11,7 +11,7 @@ import { Length, IsDate, IsUrl, IsNumber, IsInt } from 'class-validator';
 import { User } from '../../users/entities/user.entity';
 import { Offer } from '../../offers/entities/offers.entity';
 
-@Entity({ schema: 'kupipodariday' })
+@Entity()
 export class Wish {
   @PrimaryGeneratedColumn()
   id: number;

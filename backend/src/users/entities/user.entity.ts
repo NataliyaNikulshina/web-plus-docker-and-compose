@@ -11,7 +11,7 @@ import { Wish } from '../../wishes/entities/wishes.entity';
 import { Offer } from '../../offers/entities/offers.entity';
 import { Wishlist } from '../../wishlists/entities/wishlists.entity';
 
-@Entity({ schema: 'kupipodariday' })
+@Entity()
 export class User {
   @PrimaryGeneratedColumn()
   id: number;
