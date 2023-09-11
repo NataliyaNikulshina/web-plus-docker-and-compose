@@ -7,7 +7,7 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule, { cors: true });
   app.useLogger(app.get(WINSTON_MODULE_NEST_PROVIDER));
   app.useGlobalPipes(new ValidationPipe({ transform: true, whitelist: true }));
-  const port = 3001;
+  const port = 3000;
   await app.listen(port, () => console.log(`Server started on port - ${port}`));
 }
 bootstrap();
