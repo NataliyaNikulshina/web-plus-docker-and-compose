@@ -10,7 +10,7 @@ services:
     volumes:
       - db-volume:${POSTGRES_PGDATA}
     env_file:
-      - .env.pg
+      - .env.db
 
   backend:
     build: backend
@@ -19,7 +19,7 @@ services:
       - db-network
       - http-network
     env_file:
-      - .env.back
+      - .env.backand
     ports:
       - "4000:3000"
     depends_on:
