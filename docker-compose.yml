@@ -2,7 +2,7 @@ version: "3"
 
 services:
 
-  postgres:
+   database:
     image: "postgres:12.12-alpine"
     restart: "unless-stopped"
     networks:
@@ -23,7 +23,7 @@ services:
     ports:
       - "4000:3000"
     depends_on:
-      - postgres
+      - database
 
   frontend:
     build: frontend
@@ -32,6 +32,8 @@ services:
       - http-network
     ports:
       - "8081:80"
+    depends_on:
+      - backend
 
 networks:
   db-network:

@@ -2,7 +2,7 @@ FROM node:16-alpine AS builder
 WORKDIR /app
 COPY package*.json ./
 # Устанавливаем зависимости
-RUN npm i
+RUN npm сi
 # Копируем исходный код и собираем приложение
 COPY . .
 RUN npm run build
