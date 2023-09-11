@@ -19,7 +19,7 @@ services:
       - db-network
       - http-network
     env_file:
-      - .env.backand
+      - .env.backend
     ports:
       - "4000:3000"
     depends_on:
