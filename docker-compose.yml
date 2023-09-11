@@ -32,6 +32,8 @@ services:
       - http-network
     ports:
       - "8081:80"
+    depends_on:
+      - backend
 
 networks:
   db-network:
