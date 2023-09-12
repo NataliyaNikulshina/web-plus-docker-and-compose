@@ -3,6 +3,7 @@ version: "3"
 services:
 
   postgres:
+    container_name: kupipodariday-database
     image: "postgres:12.12-alpine"
     restart: "unless-stopped"
     networks:
@@ -13,6 +14,7 @@ services:
       - .env.db
 
   backend:
+    container_name: kupipodariday-backend
     build: backend
     restart: "unless-stopped"
     networks:
@@ -26,6 +28,7 @@ services:
       - postgres
 
   frontend:
+    container_name: kupipodariday-frontend
     build: frontend
     restart: "unless-stopped"
     networks:
